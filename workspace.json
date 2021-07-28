@@ -1,0 +1,99 @@
+{
+  "version": 2,
+  "projects": {
+    "waves-fe": {
+      "root": "apps/waves-fe",
+      "sourceRoot": "apps/waves-fe",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/next:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "root": "apps/waves-fe",
+            "outputPath": "dist/apps/waves-fe"
+          },
+          "configurations": {
+            "production": {}
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/next:server",
+          "options": {
+            "buildTarget": "waves-fe:build",
+            "dev": true
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "waves-fe:build:production",
+              "dev": false
+            }
+          }
+        },
+        "export": {
+          "executor": "@nrwl/next:export",
+          "options": {
+            "buildTarget": "waves-fe:build:production"
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/waves-fe"],
+          "options": {
+            "jestConfig": "apps/waves-fe/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/waves-fe/**/*.{ts,tsx,js,jsx}"]
+          }
+        }
+      }
+    },
+    "waves-fe-e2e": {
+      "root": "apps/waves-fe-e2e",
+      "sourceRoot": "apps/waves-fe-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/waves-fe-e2e/cypress.json",
+            "tsConfig": "apps/waves-fe-e2e/tsconfig.e2e.json",
+            "devServerTarget": "waves-fe:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "waves-fe:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/waves-fe-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/next"
+  },
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "babel": true
+      }
+    },
+    "@nrwl/next": {
+      "application": {
+        "style": "scss",
+        "linter": "eslint"
+      }
+    }
+  },
+  "defaultProject": "waves-fe"
+}
