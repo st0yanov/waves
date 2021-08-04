@@ -1,0 +1,1 @@
+{"pageProps":{"radio":{"slug":"the-voice","title":"The Voice","logo":"static/images/the-voice.svg","stream":"https://bss.neterra.tv/rtplive/thevoiceradio_live.stream/playlist.m3u8","player":"hls","playlist":{"strategy":"thevoice","url":"https://thevoice.bg/api/rds/radio"}}},"__N_SSG":true}

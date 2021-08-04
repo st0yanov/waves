@@ -1,1 +1,0 @@
-{"pageProps":{"radio":{"slug":"vitosha","title":"Vitosha","logo":"/static/images/vitosha.png","stream":"https://bss.neterra.tv/rtplive/vitosharadio_live.stream/playlist.m3u8","player":"hls","playlist":{"strategy":"webrad","url":"https://api.webrad.io/data/playlist/76/vitosa"}}},"__N_SSG":true}
