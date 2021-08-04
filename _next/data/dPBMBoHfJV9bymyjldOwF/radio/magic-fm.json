@@ -1,0 +1,1 @@
+{"pageProps":{"radio":{"slug":"magic-fm","title":"Magic FM","logo":"/static/images/magic-fm.png","stream":"https://bss.neterra.tv/rtplive/magicfmradio_live.stream/playlist.m3u8","player":"hls","playlist":{"strategy":"webrad","url":"https://api.webrad.io/data/playlist/76/magic-fm"}}},"__N_SSG":true}
