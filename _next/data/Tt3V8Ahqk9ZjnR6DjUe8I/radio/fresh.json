@@ -1,0 +1,1 @@
+{"pageProps":{"radio":{"slug":"fresh","title":"Fresh","logo":"static/images/fresh.png","stream":"http://193.108.24.21:8000/fresh","player":"howler","playlist":{"strategy":"webrad","url":"https://api.webrad.io/data/playlist/76/fresh"}}},"__N_SSG":true}
