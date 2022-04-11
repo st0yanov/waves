@@ -1,6 +1,27 @@
 {
   "version": 2,
   "projects": {
+    "waves-data": {
+      "root": "libs/waves-data",
+      "sourceRoot": "libs/waves-data/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/waves-data/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/waves-data"],
+          "options": {
+            "jestConfig": "libs/waves-data/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "waves-fe": {
       "root": "apps/waves-fe",
       "sourceRoot": "apps/waves-fe",
@@ -49,6 +70,18 @@
           "options": {
             "lintFilePatterns": ["apps/waves-fe/**/*.{ts,tsx,js,jsx}"]
           }
+        },
+        "deploy": {
+          "executor": "@nrwl/workspace:run-commands",
+          "outputs": [],
+          "options": {
+            "commands": [
+              "nx run waves-fe:export",
+              "touch dist/apps/waves-fe/exported/.nojekyll",
+              "gh-pages --dist dist/apps/waves-fe/exported --dotfiles --message \"Automatic deploy commit\" --user \"Deploy Bot <bot@vesko.dev>\""
+            ],
+            "parallel": false
+          }
         }
       }
     },
@@ -74,6 +107,27 @@
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/waves-fe-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "waves-ui": {
+      "root": "libs/waves-ui",
+      "sourceRoot": "libs/waves-ui/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/waves-ui/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/waves-ui"],
+          "options": {
+            "jestConfig": "libs/waves-ui/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }

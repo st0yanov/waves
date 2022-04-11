@@ -27,12 +27,18 @@
     ]
   },
   "projects": {
+    "waves-data": {
+      "tags": []
+    },
     "waves-fe": {
       "tags": []
     },
     "waves-fe-e2e": {
       "tags": [],
       "implicitDependencies": ["waves-fe"]
+    },
+    "waves-ui": {
+      "tags": []
     }
   }
 }

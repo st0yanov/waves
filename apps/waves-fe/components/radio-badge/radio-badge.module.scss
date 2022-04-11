@@ -1,0 +1,11 @@
+.radio-badge {
+    &.active {
+        img {
+            @apply shadow-light;
+        }
+
+        span {
+            @apply text-blue-500;
+        }
+    }
+}

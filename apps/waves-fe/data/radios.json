@@ -1,0 +1,99 @@
+[
+    {
+        "slug": "city",
+        "title": "City",
+        "logo": "static/images/city.svg",
+        "stream": "https://play.global.audio:80/city.aac",
+        "player": "howler",
+        "playlist": {
+            "strategy": "metacast",
+            "url": "https://meta.metacast.eu/aim/?radio=radiocity"
+        }
+    },
+    {
+        "slug": "the-voice",
+        "title": "The Voice",
+        "logo": "static/images/the-voice.svg",
+        "stream": "https://bss.neterra.tv/rtplive/thevoiceradio_live.stream/playlist.m3u8",
+        "player": "hls",
+        "playlist": {
+            "strategy": "thevoice",
+            "url": "https://thevoice.bg/api/rds/radio"
+        }
+    },
+    {
+        "slug": "n-joy",
+        "title": "N-JOY",
+        "logo": "static/images/njoy.svg",
+        "stream": "https://bravo.btv.bg/radio/njoy-radio-proxy/index.php",
+        "player": "howler",
+        "playlist": {
+            "strategy": "webrad",
+            "url": "https://api.webrad.io/data/playlist/76/n-joy"
+        }
+    },
+    {
+        "slug": "fresh",
+        "title": "Fresh",
+        "logo": "static/images/fresh.png",
+        "stream": "http://193.108.24.21:8000/fresh",
+        "player": "howler",
+        "playlist": {
+            "strategy": "webrad",
+            "url": "https://api.webrad.io/data/playlist/76/fresh"
+        }
+    },
+    {
+        "slug": "vitosha",
+        "title": "Vitosha",
+        "logo": "static/images/vitosha.png",
+        "stream": "https://bss.neterra.tv/rtplive/vitosharadio_live.stream/playlist.m3u8",
+        "player": "hls",
+        "playlist": {
+            "strategy": "webrad",
+            "url": "https://api.webrad.io/data/playlist/76/vitosa"
+        }
+    },
+    {
+        "slug": "energy",
+        "title": "Energy",
+        "logo": "static/images/energy.svg",
+        "stream": "https://play.global.audio:80/nrj.aac",
+        "player": "howler",
+        "playlist": {
+            "strategy": "metacast",
+            "url": "https://meta.metacast.eu/aim/?radio=radioenergy"
+        }
+    },
+    {
+        "slug": "nova",
+        "title": "Nova",
+        "logo": "static/images/nova.svg",
+        "stream": "https://play.global.audio:80/nova.aac",
+        "player": "howler",
+        "playlist": {
+            "strategy": "metacast",
+            "url": "https://meta.metacast.eu/aim/?radio=radionova"
+        }
+    },
+    {
+        "slug": "magic-fm",
+        "title": "Magic FM",
+        "logo": "static/images/magic-fm.png",
+        "stream": "https://bss.neterra.tv/rtplive/magicfmradio_live.stream/playlist.m3u8",
+        "player": "hls",
+        "playlist": {
+            "strategy": "webrad",
+            "url": "https://api.webrad.io/data/playlist/76/magic-fm"
+        }
+    },
+    {
+        "slug": "bnr-horizont",
+        "title": "БНР Хоризонт",
+        "logo": "static/images/bnr.jpg",
+        "stream": "https://edge17.cdn.bg:20320/fls/Horizont.stream/playlist.m3u8",
+        "player": "hls",
+        "playlist": {
+        }
+    }
+]
